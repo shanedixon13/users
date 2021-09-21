@@ -45,6 +45,7 @@ function registerUser() {
 		color
 	);
 	console.log(user);
+	saveUser(user); //this function is on the storeManager
 }
 //console log the user
 function init() {
@@ -52,3 +53,5 @@ function init() {
 	$("#btn-save").click(registerUser);
 }
 window.onload = init;
+
+//$('txtEmail').val(" ")
