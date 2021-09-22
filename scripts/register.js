@@ -46,6 +46,19 @@ function registerUser() {
 	);
 	console.log(user);
 	saveUser(user); //this function is on the storeManager
+	clear(); 
+}
+
+function clear() {
+	$("#txtEmail").val("");
+	$("#txtPassword").val("");
+	$("#txtFirst").val("");
+	$("#txtLast").val("");
+	$("#txtAge").val("");
+	$("#txtAddress").val("");
+	$("#txtPhone").val("");
+	$("#txtPayment").val("");
+	$("#txtColor").val("");
 }
 //console log the user
 function init() {
