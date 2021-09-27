@@ -46,7 +46,8 @@ function registerUser() {
 	);
 	console.log(user);
 	saveUser(user); //this function is on the storeManager
-	clear(); 
+	clear();
+	setNavInfo();
 }
 
 function clear() {
@@ -60,10 +61,16 @@ function clear() {
 	$("#txtPayment").val("");
 	$("#txtColor").val("");
 }
+function setNavInfo() {
+	let list = readUsers();
+	let count = list.length;
+	$(".menu-info label").text(count + " users");
+}
 //console log the user
 function init() {
 	console.log("init function");
 	$("#btn-save").click(registerUser);
+	setNavInfo();
 }
 window.onload = init;
 
